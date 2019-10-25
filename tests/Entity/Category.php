@@ -22,4 +22,12 @@ class Category
     {
         $this->id = \uniqid('', true);
     }
-}
+
+    /**
+     * @return string
+     */
+    public function getId(): string
+    {
+        return $this->id;
+    }
+ }

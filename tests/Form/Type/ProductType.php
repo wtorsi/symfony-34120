@@ -29,6 +29,7 @@ class ProductType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => ProductDto::class,
+            'csrf_protection' => false,
         ]);
     }
 }

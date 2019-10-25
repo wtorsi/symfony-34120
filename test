@@ -1,0 +1,8 @@
+set -x;
+export APP_ENV=test APP_DEBUG=1;
+composer require --dev symfony/phpunit-bridge symfony/browser-kit symfony/css-selector;
+
+./bin/console doctrine:database:create;
+./bin/console doctrine:schema:update --force;
+./bin/phpunit;
+
